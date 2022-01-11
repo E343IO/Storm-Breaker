@@ -14,11 +14,6 @@ if platform.uname()[0] == "Windows":
 else:
     pass
 
-root = os.environ.get('USER')
-if root != "root":
-    exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
-
-
 check_php = getoutput("php -v")
 if "not found" in check_php:
     exit("please install php \n command > sudo apt install php")

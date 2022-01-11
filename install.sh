@@ -1,14 +1,3 @@
-checkroot() {
-
-if [[ "$(id -u)" -ne 0 ]]; then
-   printf "\e[1;77mPlease, run this program as root!\n\e[0m"
-   exit 1
-fi
-
-}
-
-checkroot
-
 apt install neofetch
 clear
 echo "----------------------------------------------"
@@ -17,6 +6,9 @@ apt install php
 clear
 echo "----------------------------------------------"
 echo ""
-
 sleep 4
 clear
+python3 -m pip install -r requirements.txt
+clear
+printf "\e[1;32mfor termux, Please turn on Hotspot While using this tool\e[0m"
+exit 1
